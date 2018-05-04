@@ -1,0 +1,17 @@
+@media only screen and (min-width: 500px) {
+    .container {
+        padding-left: 100px;
+        /* padding-right: 100px; */
+    }
+}
+nav {
+    box-shadow: 0 5px 6px -6px #777;
+}
+.navbar-toggler {
+    border: 0;
+}
+.container {
+    padding-top: 15px;
+    max-width: 100%;
+    background-color: #EEEEEE;
+}

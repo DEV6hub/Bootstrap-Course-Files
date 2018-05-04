@@ -1,0 +1,39 @@
+.shipping-container {
+    margin-top: 20px;
+}
+
+.container-fluid, .row {
+    height: 100%;
+}
+.action-button {
+    min-width: 135px;
+    height: 35px;
+    border-radius: 18px;
+}
+
+img{
+    max-height: 100%;
+    max-width: 100%;
+    width: 70%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 16px;
+    right: 0;
+    margin: auto;
+}
+
+.address-container {
+    color: #FFFFFF;
+}
+
+h1 {
+    color: #FFFFFF;
+}
+
+p {
+    font-size: 18px;
+    color: #FFFFFF;
+    font-weight: 400;
+}

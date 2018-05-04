@@ -1,0 +1,74 @@
+.background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+.img-container {
+background: no-repeat center center fixed; 
+  background-size: cover;
+  display: block;
+  left: -5px;
+  top:-5px;
+  bottom:-5px;
+  position: fixed;
+  right: -5px;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  margin:-5px;
+}
+
+.row {
+    height: 100vh;
+}
+
+.center-img {
+    background-color: white;
+}
+
+img {
+    max-height: 100%;
+    max-width: 100%;
+    width: 70%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.vertical-logo {
+    left:16px;
+}
+
+.copyright {
+    font-size: 12px;
+    position: relative;
+    top: 98vh;
+    margin: auto;
+    color: #274686;
+}
+
+.container {
+    display: table;
+    max-height: 100%;
+    max-width: 100%;
+    width: 70%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}

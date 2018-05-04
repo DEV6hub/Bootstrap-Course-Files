@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <div class="img-container">
+    <img class="background" src="../../../assets/images/Fractal.png">
+  </div>
+
+  <div class="row">
+    <div class="col" *ngIf="currentTabIndex == 0">
+      <app-login></app-login>
+    </div>
+    <div class="col-3 center-img">
+      <img class="vertical-logo" src="../../../assets/images/Shirtastic-vertical.svg">
+      <div class="copyright text-center">© 2018 DEV6 – A division of The New Toronto Group Inc.</div>
+    </div>
+    <div class="col">
+      <div class="container">
+        <h2 class="text-center" *ngIf="currentTabIndex == 0">Sign up</h2>
+        <mat-tab-group [disableRipple]="true" class="demo-tab-group" (selectedTabChange)="tabChanged($event)">
+          <mat-tab label="Step 1">
+            <app-signup></app-signup>
+          </mat-tab>
+          <mat-tab label="Step 2">
+            <app-shipping></app-shipping>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </div>
+  </div>
+</div>
