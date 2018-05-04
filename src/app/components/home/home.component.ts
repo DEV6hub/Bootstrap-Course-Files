@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgbTabContent } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-home',
@@ -7,15 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('tab') tab: any;
 
-  currentTabIndex = 0;
-
-  ngOnInit() {
+  constructor() {
   }
 
-  tabChanged(event) {
-    this.currentTabIndex = event.index;
+  currentTab = 'signup';
+  shippingTabDisabled = true;
+
+  ngOnInit() {
+    this.tab.activeId = 'signup';
+  }
+
+  goToShipping(event) {
+    this.shippingTabDisabled = !event;
+    this.tab.activeId = 'shipping';
   }
 
 }
