@@ -2,19 +2,17 @@
   <div class="img-container">
     <img class="background" src="../../../assets/images/Fractal.png">
   </div>
-
   <div class="row">
-    <div class="col" *ngIf="tab && tab.activeId == 'signup'">
+    <div class="side-column" *ngIf="tab && tab.activeId == 'signup'">
       <app-login></app-login>
     </div>
-    <div class="col-3 center-img">
+    <div class="center-column center-img">
       <img class="vertical-logo" src="../../../assets/images/Shirtastic-vertical.svg">
       <div class="copyright text-center">© 2018 DEV6 – A division of The New Toronto Group Inc.</div>
     </div>
-    <div class="col">
-      <div class="container">
-        <h2 class="text-center" *ngIf="tab.activeId == 'signup'">Sign up</h2>
-        <!-- <mat-tab-group [disableRipple]="true" class="demo-tab-group" (selectedTabChange)="tabChanged($event)">
+    <div class="side-column" [ngClass]="{'shipping-col': tab.activeId !== 'signup'}">
+      <h2 class="text-center" *ngIf="tab.activeId == 'signup'">Sign up</h2>
+      <!-- <mat-tab-group [disableRipple]="true" class="demo-tab-group" (selectedTabChange)="tabChanged($event)">
           <mat-tab label="Step 1">
             <app-signup></app-signup>
           </mat-tab>
@@ -22,19 +20,18 @@
             <app-shipping></app-shipping>
           </mat-tab>
         </mat-tab-group> -->
-        <ngb-tabset class="home-tabs" [justify]="'center'" #tab="ngbTabset">
-          <ngb-tab title="Step 1" id="signup">
-            <ng-template ngbTabContent>
-              <app-signup (signupSuccess)="goToShipping($event)"></app-signup>
-            </ng-template>
-          </ngb-tab>
-          <ngb-tab title="Step 2" [disabled]="shippingTabDisabled" id="shipping">
-            <ng-template ngbTabContent>
-              <app-shipping></app-shipping>
-            </ng-template>
-          </ngb-tab>
-        </ngb-tabset>
-      </div>
+      <ngb-tabset class="home-tabs" [justify]="'center'" #tab="ngbTabset">
+        <ngb-tab title="Step 1" id="signup">
+          <ng-template ngbTabContent>
+            <app-signup (signupSuccess)="goToShipping($event)"></app-signup>
+          </ng-template>
+        </ngb-tab>
+        <ngb-tab title="Step 2" [disabled]="shippingTabDisabled" id="shipping">
+          <ng-template ngbTabContent>
+            <app-shipping></app-shipping>
+          </ng-template>
+        </ngb-tab>
+      </ngb-tabset>
     </div>
   </div>
 </div>
