@@ -4,7 +4,7 @@
   </div>
 
   <div class="row">
-    <div class="col" *ngIf="currentTabIndex == 0">
+    <div class="col" *ngIf="tab && tab.activeId == 'signup'">
       <app-login></app-login>
     </div>
     <div class="col-3 center-img">
@@ -13,15 +13,27 @@
     </div>
     <div class="col">
       <div class="container">
-        <h2 class="text-center" *ngIf="currentTabIndex == 0">Sign up</h2>
-        <mat-tab-group [disableRipple]="true" class="demo-tab-group" (selectedTabChange)="tabChanged($event)">
+        <h2 class="text-center" *ngIf="tab.activeId == 'signup'">Sign up</h2>
+        <!-- <mat-tab-group [disableRipple]="true" class="demo-tab-group" (selectedTabChange)="tabChanged($event)">
           <mat-tab label="Step 1">
             <app-signup></app-signup>
           </mat-tab>
           <mat-tab label="Step 2">
             <app-shipping></app-shipping>
           </mat-tab>
-        </mat-tab-group>
+        </mat-tab-group> -->
+        <ngb-tabset class="home-tabs" [justify]="'center'" #tab="ngbTabset">
+          <ngb-tab title="Step 1" id="signup">
+            <ng-template ngbTabContent>
+              <app-signup (signupSuccess)="goToShipping($event)"></app-signup>
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab title="Step 2" [disabled]="shippingTabDisabled" id="shipping">
+            <ng-template ngbTabContent>
+              <app-shipping></app-shipping>
+            </ng-template>
+          </ngb-tab>
+        </ngb-tabset>
       </div>
     </div>
   </div>

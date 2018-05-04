@@ -103,20 +103,33 @@ label {
     border-bottom: 1px solid #FFFFFF;
 }
 
-/* For bootstrap tabs */
-ngb-tabset ul li .nav-link.active, ngb-tabset ul li .nav-link:active{
-    font-size: 16px;
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-    color: #274686 !important;
-    border-color: #EEEEEE !important;
-    border-bottom: 2px solid #274686 !important;
-    background-color: #EEEEEE !important;
-}
-
-ngb-tabset ul li .nav-link{
+/* For catalog bootstrap tabs */
+.catalog-tabs ul li .nav-link{
     font-size: 16px;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
     color: #CDCDCD !important;
+    border-style:none;
+}
+
+.catalog-tabs ul li .nav-link.active{
+    color: #274686 !important;
+    border-bottom: 2px solid #274686 !important;
+    background-color: transparent !important;
+}
+
+/* For home bootstrap tabs */
+.home-tabs ul li .nav-link{
+    opacity: 0.5;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF !important;
+    border-style:none;
+}
+
+.home-tabs ul li .nav-link.active{
+    opacity: 1;
+    border-bottom: 2px solid #FFFFFF !important;
+    background-color: transparent !important;
 }
