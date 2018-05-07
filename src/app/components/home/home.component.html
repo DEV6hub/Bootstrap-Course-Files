@@ -1,25 +1,17 @@
 <div class="container-fluid">
   <div class="img-container">
-    <img class="background" src="../../../assets/images/Fractal.png">
+    <img src="../../../assets/images/Fractal.png">
   </div>
   <div class="row">
     <div class="side-column" *ngIf="tab && tab.activeId == 'signup'">
       <app-login></app-login>
     </div>
-    <div class="center-column center-img">
+    <div class="center-column">
       <img class="vertical-logo" src="../../../assets/images/Shirtastic-vertical.svg">
       <div class="copyright text-center">© 2018 DEV6 – A division of The New Toronto Group Inc.</div>
     </div>
     <div class="side-column" [ngClass]="{'shipping-col': tab.activeId !== 'signup'}">
       <h2 class="text-center" *ngIf="tab.activeId == 'signup'">Sign up</h2>
-      <!-- <mat-tab-group [disableRipple]="true" class="demo-tab-group" (selectedTabChange)="tabChanged($event)">
-          <mat-tab label="Step 1">
-            <app-signup></app-signup>
-          </mat-tab>
-          <mat-tab label="Step 2">
-            <app-shipping></app-shipping>
-          </mat-tab>
-        </mat-tab-group> -->
       <ngb-tabset class="home-tabs" [justify]="'center'" #tab="ngbTabset">
         <ngb-tab title="Step 1" id="signup">
           <ng-template ngbTabContent>

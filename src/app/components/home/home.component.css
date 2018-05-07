@@ -1,65 +1,42 @@
-.container-fluid {
-    background-color: slategray;
-}
-
 .img-container {
-    background: no-repeat center center fixed; 
-    background-size: cover;
-    display: block;
+    filter: blur(5px);
+    /* Removes the white edges for the blurred background image*/
+    position: fixed;
     left: -5px;
     top:-5px;
     bottom:-5px;
-    position: fixed;
     right: -5px;
-    -webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-    filter: blur(5px);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     margin:-5px;
 }
 
-.background {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100%;
-    width: 100%;
-}
-
 .row {
+    /* Makes the row to expand the entire viewport height */
     height: 100vh;
 }
 
 .side-column {
-    z-index: 10;
-    padding: 8%; 
+    padding: 8%;
+    /* The width for two side columns will be a total of 75% */
     width: 37.5%;
 }
 
 .center-column {
     width: 25%;
-    z-index: 10;
-}
-
-.side-column, .center-column {
-    display: grid;
-    align-content: center;
-}
-
-.center-img {
     background-color: white;
 }
 
+.side-column, .center-column {
+    /* Displaying the columns as grid and aligning the content as center will give us vertically center aligned components */
+    display: grid;
+    align-content: center;
+    /* To get the column layers above the background */
+    z-index: 10;
+}
+
 .vertical-logo {
+    /* Aligning the logo in center, the image is slightly off towards the left */
     margin-left:10px;
-    max-height: 100%;
-    max-width: 100%;
     width: 100%;
-    height: auto;
     padding: 35px;
 }
 
@@ -69,11 +46,12 @@
 }
 
 .shipping-col {
+    /* This class will be added on when login column is hidden, to expand the shipping column */
     width: 75%;
 }
 
 @media only screen and (max-width: 1058px) {
-    /* For mobile phones: */
+    /* For mobile phones and tablets: */
     [class*="side-column"] {
         width: 100%;
     }
