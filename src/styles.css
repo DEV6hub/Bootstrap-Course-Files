@@ -82,42 +82,6 @@ label {
     transition-delay: 0s;
 }
 
-/* For material tabs */
-.mat-tab-label {
-    color: #FFFFFF;
-    opacity: 1 !important;
-    font-size: 12px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-}
-
-.mat-tab-label:focus{
-    background-color: transparent !important;
-}
-
-.mat-ink-bar {
-    background-color:#FFFFFF !important;
-}
-
-.mat-tab-header {
-    border-bottom: 1px solid #FFFFFF;
-}
-
-/* For catalog bootstrap tabs */
-.catalog-tabs ul li .nav-link{
-    font-size: 16px;
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-    color: #CDCDCD !important;
-    border-style:none;
-}
-
-.catalog-tabs ul li .nav-link.active{
-    color: #274686 !important;
-    border-bottom: 2px solid #274686 !important;
-    background-color: transparent !important;
-}
-
 /* For home bootstrap tabs */
 .home-tabs ul li .nav-link{
     opacity: 0.5;

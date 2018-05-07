@@ -3,24 +3,24 @@
     <img src="../../../assets/images/Fractal.png">
   </div>
   <div class="row">
-    <div class="side-column" *ngIf="tab && tab.activeId == 'signup'">
-      <app-login></app-login>
+    <div class="side-column">
+      <!-- Login component goes here -->
     </div>
     <div class="center-column">
       <img class="vertical-logo" src="../../../assets/images/Shirtastic-vertical.svg">
       <div class="copyright text-center">© 2018 DEV6 – A division of The New Toronto Group Inc.</div>
     </div>
-    <div class="side-column" [ngClass]="{'shipping-col': tab.activeId !== 'signup'}">
-      <h2 class="text-center" *ngIf="tab.activeId == 'signup'">Sign up</h2>
+    <div class="side-column">
+      <h2 class="text-center">Sign up</h2>
       <ngb-tabset class="home-tabs" [justify]="'center'" #tab="ngbTabset">
         <ngb-tab title="Step 1" id="signup">
           <ng-template ngbTabContent>
-            <app-signup (signupSuccess)="goToShipping($event)"></app-signup>
+            <!-- Signup component goes here -->
           </ng-template>
         </ngb-tab>
-        <ngb-tab title="Step 2" [disabled]="shippingTabDisabled" id="shipping">
+        <ngb-tab title="Step 2" id="shipping">
           <ng-template ngbTabContent>
-            <app-shipping></app-shipping>
+            <!-- Shipping component goes here -->
           </ng-template>
         </ngb-tab>
       </ngb-tabset>
