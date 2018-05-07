@@ -4,7 +4,7 @@
   </div>
   <div class="row">
     <div class="side-column" *ngIf="tab && tab.activeId == 'signup'">
-      <app-login></app-login>
+      <!-- Login component goes here -->
     </div>
     <div class="center-column">
       <img class="vertical-logo" src="../../../assets/images/Shirtastic-vertical.svg">
@@ -20,7 +20,7 @@
         </ngb-tab>
         <ngb-tab title="Step 2" [disabled]="shippingTabDisabled" id="shipping">
           <ng-template ngbTabContent>
-            <app-shipping></app-shipping>
+            <!-- Shipping component goes here -->
           </ng-template>
         </ngb-tab>
       </ngb-tabset>
