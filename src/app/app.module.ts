@@ -10,12 +10,8 @@ import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
 import { ShippingComponent } from './components/shipping/shipping.component';
 import { CatalogComponent } from './components/catalog/catalog.component';
-import { ShirtComponent } from './components/shirt/shirt.component';
 
 import { ShirtGenderPipe } from './filters/shirt-filter';
-// For material tabs
-import { MatTabsModule } from '@angular/material';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // For bootstrap tabs
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -36,14 +32,11 @@ const routes: Routes = [
     LoginComponent,
     ShippingComponent,
     CatalogComponent,
-    ShirtComponent,
     ShirtGenderPipe
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    BrowserAnimationsModule,
-    MatTabsModule,
     NgbModule.forRoot()
   ],
   providers: [],
